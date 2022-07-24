@@ -63,4 +63,13 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*.ko,$(DEVICE_PATH)/prebuilt
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+ $(LOCAL_PATH)
+
+# otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    $(DEVICE_PATH)/security/miui_releasekey
+
+# PRODUCT_RELEASE_NAME ro.twrp.device.name
+PRODUCT_PROPERTY_OVERRIDES += ro.twrp.device.name=$(PRODUCT_RELEASE_NAME)
+
+TWRP_REQUIRED_MODULES += miui_prebuilt
