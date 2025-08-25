@@ -1,3 +1,13 @@
+#
+"FOX_MAINTAINER_PATCH_VERSION" [NEW]
+  - use this to add your maintainer version information (if desired) to the OrangeFox release version number
+  - the value supplied here should not be preceded by any separator (an underscore is added automatically)
+  - eg. export FOX_MAINTAINER_PATCH_VERSION="04" (produces something like "R11.3_04")
+  - default = nothing
+#
+"OF_MAINTAINER"
+  - failedmush
+
 # screen settings
 OF_SCREEN_H := 2400
 OF_STATUS_H := 100
