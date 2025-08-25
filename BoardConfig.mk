@@ -162,14 +162,14 @@ TW_THEME := portrait_hdpi
 TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
 
-TW_HAS_EDL_MODE := true
+TW_HAS_EDL_MODE := false
 TW_ENABLE_BLKDISCARD := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_PYTHON := true
 TW_INCLUDE_RESETPROP := true
 TW_EXTRA_LANGUAGES := true
-
+TW_BACKUP_EXCLUSIONS := /data/fonts,/data/adb/ap,/data/adb/ksu
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 TW_DEVICE_VERSION := 0_Rocky7842
