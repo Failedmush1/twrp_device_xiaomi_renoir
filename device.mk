@@ -66,8 +66,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
     $(DEVICE_PATH)
 
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/miui_releasekey
