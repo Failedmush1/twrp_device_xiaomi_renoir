@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*.ko,$(DEVICE_PATH)/prebuilt
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-    $(DEVICE_PATH)
 
 # otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
