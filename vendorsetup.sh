@@ -53,6 +53,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-	fi
+# Maintainer Stuff
+    export OF_MAINTAINER="Failedmush"
+    export FOX_VARIANT="Unified"
+else
+    if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
+        echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
+    fi
 fi
 #
