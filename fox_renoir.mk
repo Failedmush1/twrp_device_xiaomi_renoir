@@ -2,16 +2,16 @@
 "FOX_MAINTAINER_PATCH_VERSION" [NEW]
   - use this to add your maintainer version information (if desired) to the OrangeFox release version number
   - the value supplied here should not be preceded by any separator (an underscore is added automatically)
-  - eg. export FOX_MAINTAINER_PATCH_VERSION="04" (produces something like "R11.3_04")
+  - eg. export FOX_MAINTAINER_PATCH_VERSION="Failedmush" (produces something like "R11.3_04")
   - default = Failedmush
 
 # screen settings
-OF_SCREEN_H := 2400
-OF_STATUS_H := 100
-OF_STATUS_INDENT_LEFT := 150
-OF_STATUS_INDENT_RIGHT := 48
-OF_HIDE_NOTCH := 1
-OF_CLOCK_POS := 1
+export OF_SCREEN_H=2400
+export OF_STATUS_H=100
+export OF_STATUS_INDENT_LEFT=48
+export OF_STATUS_INDENT_RIGHT=48
+export OF_HIDE_NOTCH=1
+export OF_CLOCK_POS=150
 
 # other stuff
 OF_USE_GREEN_LED := 0
