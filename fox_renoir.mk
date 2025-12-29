@@ -6,13 +6,19 @@
   - default = Failedmush
 
 # screen settings
+# Screen Resolution and Proportions
 export OF_SCREEN_H=2400
-export OF_STATUS_H=100
-export OF_STATUS_INDENT_LEFT=48
+export OF_STATUS_H=120          # Increased to clear the punch-hole camera
+export OF_STATUS_INDENT_LEFT=100 # Indent more on the left to avoid the punch-hole
 export OF_STATUS_INDENT_RIGHT=48
-export OF_STATUSBAR_INDENT_RIGHT=100
-export OF_HIDE_NOTCH=1
-export OF_CLOCK_POS=1
+
+# UI Fitting
+export OF_HIDE_NOTCH=0          # Set to 0 to allow UI to fill the top of the screen
+export OF_CLOCK_POS=1           # 0=Left, 1=Center, 2=Right (Center is safest for renoir)
+
+# Additional UI Tweaks
+export OF_ALLOW_CONTENT_IN_NOTCH=1
+export OF_SCREEN_OFFSET=0
 
 # other stuff
 OF_USE_GREEN_LED := 0
