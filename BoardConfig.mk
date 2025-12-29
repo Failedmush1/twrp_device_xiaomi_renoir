@@ -116,6 +116,12 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+#recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+# PBRP config
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_OFFICIAL := false
+
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true

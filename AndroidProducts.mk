@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/twrp_renoir.mk
+	$(LOCAL_DIR)/pb_renoir.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_renoir-eng
+    pb_renoir-eng
