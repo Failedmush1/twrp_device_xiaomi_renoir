@@ -1,9 +1,18 @@
 #
-"FOX_MAINTAINER_PATCH_VERSION" [NEW]
-  - use this to add your maintainer version information (if desired) to the OrangeFox release version number
-  - the value supplied here should not be preceded by any separator (an underscore is added automatically)
-  - eg. export FOX_MAINTAINER_PATCH_VERSION="Failedmush" (produces something like "R11.3_04")
-  - default = Failedmush
+# Maintainer and Versioning
+export FOX_MAINTAINER="Failedmush"
+export FOX_VERSION="R11.3"              # Updated to the latest release
+export FOX_MAINTAINER_PATCH_VERSION="1" # Becomes R11.3_1
+
+# Screen Settings for Full Screen (20:9 Aspect Ratio)
+export OF_SCREEN_H=2400
+export OF_STATUS_H=120           # Higher status bar for renoir's punch-hole
+export OF_STATUS_INDENT_LEFT=100  # Shift icons right to avoid the top-left camera
+export OF_STATUS_INDENT_RIGHT=48
+export OF_HIDE_NOTCH=0           # Set to 0 to ensure UI fills the top
+export OF_CLOCK_POS=1            # Centers the clock for a cleaner look
+export OF_ALLOW_CONTENT_IN_NOTCH=1
+
 
 # screen settings
 # Screen Resolution and Proportions
