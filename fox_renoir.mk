@@ -3,16 +3,13 @@ export FOX_MAINTAINER="Failedmush"
 export FOX_VERSION="R11.3"              
 export FOX_MAINTAINER_PATCH_VERSION="1" 
 
-# Screen Settings 
-export OF_SCREEN_H=2400
-export OF_STATUS_H=120           
-export OF_STATUS_INDENT_LEFT=100  
-export OF_STATUS_INDENT_RIGHT=48
-export OF_HIDE_NOTCH=1           
-export OF_CLOCK_POS=1            
-export OF_ALLOW_CONTENT_IN_NOTCH=1
-
-
+# screen settings
+OF_SCREEN_H := 2400
+OF_STATUS_H := 80
+OF_STATUS_INDENT_LEFT := 58
+OF_STATUS_INDENT_RIGHT := 58
+OF_HIDE_NOTCH := 1
+OF_CLOCK_POS := 1
 
 # other stuff
 OF_USE_GREEN_LED := 0
