@@ -172,7 +172,7 @@ TW_EXTRA_LANGUAGES := true
 TW_BACKUP_EXCLUSIONS := /data/fonts,/data/adb/ap,/data/adb/ksu
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-TW_DEVICE_VERSION := 0_Rocky7842
+TW_DEVICE_VERSION := Failedmush
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
