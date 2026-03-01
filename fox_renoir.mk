@@ -1,8 +1,3 @@
-# Maintainer and Versioning
-export FOX_MAINTAINER="Failedmush"
-export FOX_VERSION="R11.3"              
-export FOX_MAINTAINER_PATCH_VERSION="1" 
-
 # screen settings
 OF_SCREEN_H := 2400
 OF_STATUS_H := 80
