@@ -1,11 +1,15 @@
-# screen settings
-OF_SCREEN_H=2400
-OF_STATUS_H=100
-OF_STATUS_INDENT_LEFT=48
-OF_STATUS_INDENT_RIGHT=48
-OF_STATUSBAR_INDENT_RIGHT=100
-OF_HIDE_NOTCH=1
-OF_CLOCK_POS=1
+# Custom pic for maintainers about section info
+# Image should be 32 bit PNG 192 x 192 px - Size of image should be as small as possible 50kb
+OF_MAINTAINER := Failedmush
+
+# Screen settings
+OF_SCREEN_H := 2400
+OF_STATUS_H := 80
+OF_STATUS_INDENT_LEFT := 40
+OF_STATUS_INDENT_RIGHT := 40
+##export OF_HIDE_NOTCH := 1
+##export OF_CLOCK_POS := 1
+OF_ALLOW_DISABLE_NAVBAR := 0
 
 # other stuff
 OF_USE_GREEN_LED := 0
@@ -14,7 +18,7 @@ OF_ENABLE_LPTOOLS := 1
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 
 # full size
-OF_DYNAMIC_FULL_SIZE := 130
+##OF_DYNAMIC_FULL_SIZE := 130
 
 # number of list options before scrollbar creation
 OF_OPTIONS_LIST_NUM := 9
