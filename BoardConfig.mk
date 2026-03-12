@@ -175,6 +175,11 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 
 TW_DEVICE_VERSION := Failedmush
 
+# TWRP notch offsets
+TW_STATUS_ICONS_ALIGN := center
+TW_Y_OFFSET := 99
+TW_H_OFFSET := -99
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
