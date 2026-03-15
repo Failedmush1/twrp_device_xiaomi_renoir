@@ -1,3 +1,7 @@
+‎# Custom pic for maintainers about section info
+# Image should be 32 bit PNG 192 x 192 px - Size of image should be as small as possible 50kb
+OF_MAINTAINER := Failedmush
+
 # screen settings
 OF_SCREEN_H := 2400
 OF_STATUS_H := 80
