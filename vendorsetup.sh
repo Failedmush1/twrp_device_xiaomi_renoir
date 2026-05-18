@@ -34,10 +34,10 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-        export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v28.1.zip
-   	export TW_DEFAULT_LANGUAGE="en"
+	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v28.1.zip
+	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
- 	export ALLOW_MISSING_DEPENDENCIES=true
+	export ALLOW_MISSING_DEPENDENCIES=true
 	export FOX_ENABLE_APP_MANAGER=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
@@ -45,20 +45,18 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export FOX_USE_LZ4_BINARY=1
 	export FOX_USE_ZSTD_BINARY=1
-        export FOX_DELETE_AROMAFM=1
+	export FOX_DELETE_AROMAFM=1
 	export TARGET_DEVICE_ALT="bhima"
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-        [ "$FOX_BUILD_TYPE" = "Stable" ] && export OF_ADVANCED_SECURITY=1;
+	[ "$FOX_BUILD_TYPE" = "Stable" ] && export OF_ADVANCED_SECURITY=1;
+
+	# Maintainer Stuff
+	export OF_MAINTAINER="Failedmush"
+	export FOX_VARIANT="Unified"
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-# Maintainer Stuff
-    export OF_MAINTAINER="Failedmush"
-    export FOX_VARIANT="Unified"
-else
-    if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
-        echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-    fi
+	fi
 fi
 #
