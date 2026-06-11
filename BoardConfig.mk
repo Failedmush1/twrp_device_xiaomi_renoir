@@ -181,6 +181,10 @@ TW_X_OFFSET := 10
 TW_W_OFFSET := -10
 TW_CUSTOM_CPU_POS := 150
 
+# Recovery Installer
+USE_RECOVERY_INSTALLER := true
+RECOVERY_INSTALLER_PATH := bootable/recovery/installer
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
