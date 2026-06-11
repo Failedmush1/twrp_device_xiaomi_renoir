@@ -159,10 +159,10 @@ TW_MAX_BRIGHTNESS := 2047
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone26/temp
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_THEME := portrait_hdpi
-TW_Y_OFFSET := 100
-TW_H_OFFSET := -100
-
-TW_HAS_EDL_MODE := false
+TW_Y_OFFSET := 28
+TW_H_OFFSET := 6
+TW_FRAMERATE := 60
+TW_HAS_EDL_MODE := true
 TW_ENABLE_BLKDISCARD := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
@@ -173,6 +173,12 @@ TW_BACKUP_EXCLUSIONS := /data/fonts,/data/adb/ap,/data/adb/ksu
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 TW_DEVICE_VERSION := Failedmush
+
+# TWRP notch offsets
+TW_STATUS_ICONS_ALIGN := left
+TW_X_OFFSET := 10
+TW_W_OFFSET := -10
+TW_CUSTOM_CPU_POS := 150
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
