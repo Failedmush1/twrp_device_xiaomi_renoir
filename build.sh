@@ -32,4 +32,8 @@ make clean
 mka adbd bootimage
 
 echo "Build completed! Outputs are in out/target/product/renoir/"
-ls -lh out/target/product/renoir/boot.img out/target/product/renoir/recovery-installer.zip
+cd out/target/product/renoir/
+if [ -f "recovery-installer.zip" ]; then
+    mv recovery-installer.zip twrp-3.7.1_12-unofficial-renoir.zip
+fi
+ls -lh boot.img twrp-3.7.1_12-unofficial-renoir.zip
