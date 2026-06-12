@@ -13,7 +13,6 @@ persist.sys.usb.config=adb
 ro.minui.pixel_format=RGBX_8888
 
 # Platform
-ro.board.platform=xiaomi_sm8350
 ro.adb.secure=0
 ro.boot.dynamic_partitions=true
 ro.virtual_ab.enabled=true
