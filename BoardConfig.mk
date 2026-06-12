@@ -110,12 +110,18 @@ TW_USE_FSCRYPT_POLICY := 2
 TARGET_RECOVERY_DEVICE_MODULES += \
     libion.so \
     vendor.display.config@1.0 \
-    vendor.display.config@2.0
+    vendor.display.config@2.0 \
+    android.hardware.boot@1.0-impl-1.1-qti.so \
+    android.hardware.health@2.0-impl-2.1.so \
+    bootctrl.xiaomi_sm8350.so
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.0-impl-1.1-qti.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health@2.0-impl-2.1.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/hw/bootctrl.xiaomi_sm8350.so
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
@@ -235,3 +241,8 @@ RECOVERY_BINARY_SOURCE_FILES += \
 
 # Inherit extra if exists
 -include vendor/extra/BoardConfigExtra.mk
+
+# MTP Logic: If TW_EXCLUDE_MTP is unset/empty, MTP is included.
+TW_EXCLUDE_MTP :=
+TW_HAS_MTP := true
+TW_INCLUDE_MTP := true
