@@ -151,6 +151,14 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# USB
+TW_OTG_CAPABILITY := true
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libresetprop \
+    resetprop \
+    mount.ntfs \
+    fsck.ntfs \
+    mkfs.ntfs
 # TWRP Configuration
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_QCOM_RTC_FIX := true
