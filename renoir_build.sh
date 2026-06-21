@@ -12,10 +12,9 @@ BUILD_TARGETS="adbd bootimage"
 # --- Build Variables ---
 export ALLOW_MISSING_DEPENDENCIES=true
 export OF_MAINTAINER="Failedmush"
-export FOX_VARIANT="Beta"
-export FOX_BUILD_TYPE="Unofficial"
+export FOX_BUILD_TYPE="Stable"
+export FOX_MAINTAINER_PATCH_VERSION="2"
 export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v28.1.zip
-# export FOX_MAINTAINER_PATCH_VERSION="01" # Optional suffix (e.g. R12.0_01)
 
 # Optional: Add any other vars from your vendorsetup here
 export FOX_ENABLE_APP_MANAGER=1

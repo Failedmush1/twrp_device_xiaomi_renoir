@@ -1,6 +1,9 @@
-# Custom pic for maintainers about section info
-# Image should be 32 bit PNG 192 x 192 px - Size of image should be as small as possible 50kb
+# Maintainer
 OF_MAINTAINER := Failedmush
+
+# Versioning
+FOX_BUILD_TYPE := Stable
+FOX_MAINTAINER_PATCH_VERSION := 2
 
 # screen settings
 OF_SCREEN_H := 2400
