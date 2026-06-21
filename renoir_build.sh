@@ -3,6 +3,10 @@
 # Exit on error
 set -e
 
+# Just to be on safer side
+export OUT_DIR=out
+ulimit -n 16000
+
 # Get the root directory of the TWRP source tree
 # (Assumes this script is in device/xiaomi/renoir/)
 ROOT_DIR=$(realpath "$(dirname "$0")/../../..")
