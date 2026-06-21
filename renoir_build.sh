@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Just to be on safer side
+export OUT_DIR=out
+ulimit -n 16000
+
 # OrangeFox Recovery Build Script
 # Target: Xiaomi Mi 11 Lite 5G (renoir)
 
