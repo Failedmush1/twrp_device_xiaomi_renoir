@@ -47,6 +47,17 @@ if [ "$MAKE_CLEAN" = true ]; then
     make clean
 fi
 
+# Apply patches
+echo "--- Applying vold decryption patches ---"
+for patch in device/xiaomi/renoir/patches/*.patch; do
+    if patch -p1 -N --dry-run -d system/vold < "$patch" >/dev/null 2>&1; then
+        echo "Applying $patch"
+        patch -p1 -N -d system/vold < "$patch"
+    else
+        echo "Patch $patch already applied or conflicts."
+    fi
+done
+
 # Build
 echo "--- Starting compilation: $BUILD_TARGETS ---"
 start_time=$(date +%s)
