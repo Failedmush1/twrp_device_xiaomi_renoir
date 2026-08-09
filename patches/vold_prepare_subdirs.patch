@@ -1,0 +1,23 @@
+diff --git a/vold_prepare_subdirs.cpp b/vold_prepare_subdirs.cpp
+index e2afb81..400dea3 100644
+--- a/vold_prepare_subdirs.cpp
++++ b/vold_prepare_subdirs.cpp
+@@ -144,7 +144,7 @@ static bool prepare_apex_subdirs(struct selabel_handle* sehandle, const std::str
+     auto dirp = std::unique_ptr<DIR, int (*)(DIR*)>(opendir("/apex"), closedir);
+     if (!dirp) {
+         PLOG(ERROR) << "Unable to open apex directory";
+-        return false;
++        return true;
+     }
+     struct dirent* entry;
+     while ((entry = readdir(dirp.get())) != nullptr) {
+@@ -265,7 +265,8 @@ int main(int argc, const char* const argv[]) {
+     int user_id = stoi(args[2]);
+     int flags = stoi(args[3]);
+     if (args[0] == "prepare") {
+-        if (!prepare_subdirs(volume_uuid, user_id, flags)) return -1;
++        prepare_subdirs(volume_uuid, user_id, flags);
++        return 0;
+     } else if (args[0] == "destroy") {
+         if (!destroy_subdirs(volume_uuid, user_id, flags)) return -1;
+     } else {
