@@ -30,6 +30,18 @@ source build/envsetup.sh
 echo "Applying TWRP recovery installer patch (5445)..."
 repopick -g https://gerrit.twrp.me 5445 || echo "Patch already applied or failed to apply."
 
+# Apply vold patches
+echo "Applying vold patches..."
+VOLD_PATCH_DIR="$ROOT_DIR/device/xiaomi/renoir/patches"
+cd "$ROOT_DIR/system/vold"
+for patch in "$VOLD_PATCH_DIR"/*.patch; do
+    if [ -f "$patch" ]; then
+        echo "Applying $(basename "$patch")..."
+        git apply "$patch" || echo "Patch $(basename "$patch") already applied or failed."
+    fi
+done
+cd "$ROOT_DIR"
+
 # Lunch and Build
 lunch twrp_renoir-eng
 make clean
