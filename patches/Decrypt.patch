@@ -1,0 +1,14 @@
+diff --git a/Decrypt.cpp b/Decrypt.cpp
+index d9f034b..5139fac 100755
+--- a/Decrypt.cpp
++++ b/Decrypt.cpp
+@@ -630,8 +630,7 @@ bool Decrypt_CE_storage(const userid_t user_id, int token, const std::string& se
+ 	}
+ 	printf("Attempting to prepare user storage\n");
+ 	if (!fscrypt_prepare_user_storage("", user_id, 0, flags)) {
+-		printf("failed to fscrypt_prepare_user_storage\n");
+-		return false;
++		printf("failed to fscrypt_prepare_user_storage (non-fatal)\n");
+ 	}
+ 	printf("User %i Decrypted Successfully!\n", user_id);
+ 	return true;
