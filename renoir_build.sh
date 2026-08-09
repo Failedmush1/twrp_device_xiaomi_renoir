@@ -25,12 +25,15 @@ fi
 
 # Initialize environment
 source build/envsetup.sh
+unset TARGET_PRODUCT
+unset TARGET_BUILD_VARIANT
 
 # Apply TWRP recovery installer patch (5445)
 echo "Applying TWRP recovery installer patch (5445)..."
-repopick -g https://gerrit.twrp.me 5445 || echo "Patch already applied or failed to apply."
+# repopick -g https://gerrit.twrp.me 5445 || echo "Patch already applied or failed to apply."
 
 # Apply vold patches
+# (rest of patches logic)
 echo "Applying vold patches..."
 VOLD_PATCH_DIR="$ROOT_DIR/device/xiaomi/renoir/patches"
 cd "$ROOT_DIR/system/vold"
@@ -44,7 +47,7 @@ cd "$ROOT_DIR"
 
 # Lunch and Build
 lunch twrp_renoir-eng
-make clean
+# make clean
 mka adbd bootimage
 
 echo "Build completed! Outputs are in out/target/product/renoir/"
