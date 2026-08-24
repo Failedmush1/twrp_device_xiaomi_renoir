@@ -1,6 +1,13 @@
 import /init.recovery.qcom_decrypt.rc
 
+on early-init
+    mkdir /apex 0755 root root
+    mkdir /tmp/apex 0755 root root
+
 on init
+    mkdir /apex 0755 root root
+    mkdir /data/misc_ce 0771 system misc
+    mkdir /data/misc_de 0771 system misc
     exec u:r:recovery:s0 -- /system/bin/resetprop ro.boot.verifiedbootstate orange
 
 on boot
